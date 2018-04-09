@@ -6,6 +6,7 @@ public class MainGame : MonoBehaviour {
 
 	float mRap=1f;
 	public tk2dSprite avatar;
+    public tk2dUIItem btnPlay;
 
 
 	public void doRandonSprite()
@@ -75,9 +76,14 @@ public class MainGame : MonoBehaviour {
 		}
 	}
 
+    public void btnPlay_OnClick()
+    {
+        PopUpController.instance.HideMainGame();
+    }
+
 	// Use this for initialization
 	void Start () {
-	
+        btnPlay.OnClick += btnPlay_OnClick;
 	}
 	
 	// Update is called once per frame
