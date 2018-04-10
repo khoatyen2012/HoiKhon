@@ -79,6 +79,7 @@ public class MainGame : MonoBehaviour {
     public void btnPlay_OnClick()
     {
         PopUpController.instance.HideMainGame();
+        PopUpController.instance.ShowInGame();
     }
 
 	// Use this for initialization
