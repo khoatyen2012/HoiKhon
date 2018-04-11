@@ -51,6 +51,7 @@ public class PopUpController : MonoBehaviour {
 
     public void ShowInGame()
     {
+		inGame.setData ();
         inGame.transform.position = new Vector3(inGame.transform.position.x, showY, inGame.transform.position.z);
     }
 
@@ -62,6 +63,7 @@ public class PopUpController : MonoBehaviour {
 
     public void ShowMainGame()
     {
+		maingame.setData ();
         maingame.transform.position = new Vector3(maingame.transform.position.x, showY, maingame.transform.position.z);
     }
 

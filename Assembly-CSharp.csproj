@@ -45,7 +45,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Controller\GameController.cs" />
      <Compile Include="Assets\Scripts\Controller\PopUpController.cs" />
+     <Compile Include="Assets\Scripts\IO\ReadText.cs" />
+     <Compile Include="Assets\Scripts\Mode\Question.cs" />
      <Compile Include="Assets\Scripts\UI\GameOver.cs" />
      <Compile Include="Assets\Scripts\UI\InGame.cs" />
      <Compile Include="Assets\Scripts\UI\MainGame.cs" />

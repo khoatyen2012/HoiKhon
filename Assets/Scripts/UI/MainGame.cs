@@ -8,6 +8,11 @@ public class MainGame : MonoBehaviour {
 	public tk2dSprite avatar;
     public tk2dUIItem btnPlay;
 
+	public void setData()
+	{
+		GameController.instance.currentState = GameController.State.Start;
+	}
+
 
 	public void doRandonSprite()
 	{
