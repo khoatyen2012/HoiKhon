@@ -24,10 +24,16 @@ public class InGame : MonoBehaviour {
 
 	 Question quTMG;
 	public string checkque;
+    public string checkA;
+    public string checkB;
+    public string checkC;
+    public string checkD;
+
 
 	string selectcase="";
 
 	List<Question> lst=new List<Question>();
+    int mScore = 0;
 
 
 	public void btnA_OnClick()
@@ -68,11 +74,102 @@ public class InGame : MonoBehaviour {
 
 		if (selectcase.Equals (quTMG.Truecase)) {
 			Debug.Log ("Dung roi");
+            mScore++;
+            txtScore.text = "" + mScore;
 			GameController.instance.currentState = GameController.State.ReplyTrue;
+            StartCoroutine(WaitTimeDung(1f));
 		} else {
 			Debug.Log ("Sai roi");
 			GameController.instance.currentState = GameController.State.ReplyFalse;
 			mesage.SetActive (true);
+            switch (selectcase)
+            {
+                case "a":
+                    if (quTMG.Gta.Trim().Equals(""))
+                    {
+                        if (mScore % 3 == 0)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
+                        }
+                        else if (mScore % 2 == 0)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
+                        }
+                        else
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Óc chó có thật :))";
+                        }
+                    }
+                    else
+                    {
+                        mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = quTMG.Gta;
+                    }
+                    break;
+                case "b":
+                    if (quTMG.Gtb.Trim().Equals(""))
+                    {
+                        if (mScore % 3 == 0)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
+                        }
+                        else if (mScore % 2 == 0)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
+                        }
+                        else
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Óc chó có thật :))";
+                        }
+                    }
+                    else
+                    {
+                        mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = quTMG.Gtb;
+                    }
+                    break;
+                case "c":
+                    if (quTMG.Gtc.Trim().Equals(""))
+                    {
+                        if (mScore % 3 == 0)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
+                        }
+                        else if (mScore % 2 == 0)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
+                        }
+                        else
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Óc chó có thật :))";
+                        }
+                    }
+                    else
+                    {
+                        mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = quTMG.Gtc;
+                    }
+                    break;
+
+                default:
+                    if (quTMG.Gtd.Trim().Equals(""))
+                    {
+                        if (mScore % 3 == 0)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
+                        }
+                        else if (mScore % 2 == 0)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
+                        }
+                        else
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Óc chó có thật :))";
+                        }
+                    }
+                    else
+                    {
+                        mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = quTMG.Gtd;
+                    }
+                    break;
+            }
 			StartCoroutine(WaitTimeSai(1.5f));
 		}
 	}
@@ -83,6 +180,16 @@ public class InGame : MonoBehaviour {
 		yield return new WaitForSeconds(time);
 		mesage.SetActive (false);
 	}
+
+    IEnumerator WaitTimeDung(float time)
+    {
+        //do something...............
+        yield return new WaitForSeconds(time);
+        GameController.instance.currentState = GameController.State.Next;
+        PopUpController.instance.HideInGame();
+        PopUpController.instance.ShowNextGame();
+    
+    }
 
 	public void btnAvatar_OnClick()
 	{
@@ -111,6 +218,10 @@ public class InGame : MonoBehaviour {
 			txtNickGame.text ="Nick Name:"+ quTMG.Nickname;
 			checkque = quTMG.Truecase;
 
+            checkA = quTMG.Gta;
+            checkB = quTMG.Gtb;
+            checkC = quTMG.Gtc;
+            checkD = quTMG.Gtd;
 
 		}
 	}
