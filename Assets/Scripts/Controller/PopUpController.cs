@@ -26,8 +26,9 @@ public class PopUpController : MonoBehaviour {
     public GameOver gameOver;
 
 
-    public void ShowGameOver()
+    public void ShowGameOver(string pQue, string pDa, int pMax)
     {
+        gameOver.setData(pQue, pDa, pMax);
         gameOver.transform.position = new Vector3(gameOver.transform.position.x, showY, gameOver.transform.position.z);
     }
 

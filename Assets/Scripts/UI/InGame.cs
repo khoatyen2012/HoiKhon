@@ -110,11 +110,11 @@ public class InGame : MonoBehaviour {
                 case "b":
                     if (quTMG.Gtb.Trim().Equals(""))
                     {
-					if (GameController.instance.mScore % 3 == 0)
+					if (GameController.instance.mScore % 2 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
                         }
-					else if (GameController.instance.mScore % 2 == 0)
+					else if (GameController.instance.mScore % 3 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
                         }
@@ -131,11 +131,11 @@ public class InGame : MonoBehaviour {
                 case "c":
                     if (quTMG.Gtc.Trim().Equals(""))
                     {
-					if (GameController.instance.mScore % 3 == 0)
+					if (GameController.instance.mScore % 4 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
                         }
-					else if (GameController.instance.mScore % 2 == 0)
+					else if (GameController.instance.mScore % 3 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
                         }
@@ -153,11 +153,11 @@ public class InGame : MonoBehaviour {
                 default:
                     if (quTMG.Gtd.Trim().Equals(""))
                     {
-					if (GameController.instance.mScore % 3 == 0)
+					if (GameController.instance.mScore % 5 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
                         }
-					else if (GameController.instance.mScore % 2 == 0)
+					else if (GameController.instance.mScore % 3 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
                         }
@@ -172,7 +172,7 @@ public class InGame : MonoBehaviour {
                     }
                     break;
             }
-			StartCoroutine(WaitTimeSai(1.5f));
+			StartCoroutine(WaitTimeSai(2f));
 		}
 	}
 
@@ -184,7 +184,23 @@ public class InGame : MonoBehaviour {
 		if (GameController.instance.mNgu <= 0) {
 			GameController.instance.currentState = GameController.State.GameOver;
 			PopUpController.instance.HideInGame ();
-			PopUpController.instance.ShowGameOver ();
+            
+            switch(quTMG.Truecase)
+            {
+                case "a":
+                    PopUpController.instance.ShowGameOver (quTMG.Question2,quTMG.Da,12);
+                    break;
+                case "b":
+                    PopUpController.instance.ShowGameOver(quTMG.Question2, quTMG.Db, 12);
+                    break;
+                case "c":
+                    PopUpController.instance.ShowGameOver(quTMG.Question2, quTMG.Dc, 12);
+                    break;
+                default:
+                    PopUpController.instance.ShowGameOver(quTMG.Question2, quTMG.Dd, 12);
+                    break;
+            }
+			
 
 		} else {
 			GameController.instance.currentState = GameController.State.Question;
