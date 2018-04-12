@@ -2,11 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\UI\InGame.cs">
     <Files>
-      <File FileName="Assets\Scripts\UI\InGame.cs" Line="74" Column="75" />
-      <File FileName="Assets\Scripts\Controller\GameController.cs" Line="28" Column="13" />
-      <File FileName="Assets\Scripts\Mode\Question.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\InGame.cs" Line="241" Column="26" />
+      <File FileName="Assets\Scripts\Controller\GameController.cs" Line="66" Column="1" />
+      <File FileName="Assets\Scripts\Mode\Question.cs" Line="110" Column="27" />
       <File FileName="Assets\Scripts\UI\MainGame.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Controller\PopUpController.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\NextGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\UI\GameOver.cs" Line="12" Column="42" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

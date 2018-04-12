@@ -33,7 +33,7 @@ public class InGame : MonoBehaviour {
 	string selectcase="";
 
 	List<Question> lst=new List<Question>();
-    int mScore = 0;
+ 
 
 
 	public void btnA_OnClick()
@@ -73,25 +73,27 @@ public class InGame : MonoBehaviour {
 	{
 
 		if (selectcase.Equals (quTMG.Truecase)) {
-			Debug.Log ("Dung roi");
-            mScore++;
-            txtScore.text = "" + mScore;
+			
+			GameController.instance.mScore++;
+			txtScore.text = "" + GameController.instance.mScore;
 			GameController.instance.currentState = GameController.State.ReplyTrue;
             StartCoroutine(WaitTimeDung(1f));
 		} else {
-			Debug.Log ("Sai roi");
+			
 			GameController.instance.currentState = GameController.State.ReplyFalse;
 			mesage.SetActive (true);
+			GameController.instance.mNgu--;
+			txtLuotNgu.text = "Lượt Ngu:" + GameController.instance.mNgu;
             switch (selectcase)
             {
                 case "a":
                     if (quTMG.Gta.Trim().Equals(""))
                     {
-                        if (mScore % 3 == 0)
+					if (GameController.instance.mScore % 3 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
                         }
-                        else if (mScore % 2 == 0)
+					else if (GameController.instance.mScore % 2 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
                         }
@@ -108,11 +110,11 @@ public class InGame : MonoBehaviour {
                 case "b":
                     if (quTMG.Gtb.Trim().Equals(""))
                     {
-                        if (mScore % 3 == 0)
+					if (GameController.instance.mScore % 3 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
                         }
-                        else if (mScore % 2 == 0)
+					else if (GameController.instance.mScore % 2 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
                         }
@@ -129,11 +131,11 @@ public class InGame : MonoBehaviour {
                 case "c":
                     if (quTMG.Gtc.Trim().Equals(""))
                     {
-                        if (mScore % 3 == 0)
+					if (GameController.instance.mScore % 3 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
                         }
-                        else if (mScore % 2 == 0)
+					else if (GameController.instance.mScore % 2 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
                         }
@@ -151,11 +153,11 @@ public class InGame : MonoBehaviour {
                 default:
                     if (quTMG.Gtd.Trim().Equals(""))
                     {
-                        if (mScore % 3 == 0)
+					if (GameController.instance.mScore % 3 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
                         }
-                        else if (mScore % 2 == 0)
+					else if (GameController.instance.mScore % 2 == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
                         }
@@ -179,6 +181,15 @@ public class InGame : MonoBehaviour {
 		//do something...............
 		yield return new WaitForSeconds(time);
 		mesage.SetActive (false);
+		if (GameController.instance.mNgu <= 0) {
+			GameController.instance.currentState = GameController.State.GameOver;
+			PopUpController.instance.HideInGame ();
+			PopUpController.instance.ShowGameOver ();
+
+		} else {
+			GameController.instance.currentState = GameController.State.Question;
+		}
+
 	}
 
     IEnumerator WaitTimeDung(float time)
@@ -187,7 +198,22 @@ public class InGame : MonoBehaviour {
         yield return new WaitForSeconds(time);
         GameController.instance.currentState = GameController.State.Next;
         PopUpController.instance.HideInGame();
-        PopUpController.instance.ShowNextGame();
+		switch(quTMG.Truecase)
+		{
+		case "a":
+			PopUpController.instance.ShowNextGame(quTMG.Gta);
+			break;
+		case "b":
+			PopUpController.instance.ShowNextGame(quTMG.Gtb);
+			break;
+		case "c":
+			PopUpController.instance.ShowNextGame(quTMG.Gtc);
+			break;
+		default:
+			PopUpController.instance.ShowNextGame(quTMG.Gtd);
+			break;
+		}
+        
     
     }
 
@@ -212,7 +238,7 @@ public class InGame : MonoBehaviour {
 			quTMG = lst [chon];
 			txtQuestion.text = quTMG.Question2;
 			txtDa.text =quTMG.Da;
-			txtDb.text = quTMG.Db;
+			txtDb.text = quTMG.Db;		
 			txtDc.text = quTMG.Dc;
 			txtDd.text = quTMG.Dd;
 			txtNickGame.text ="Nick Name:"+ quTMG.Nickname;
@@ -224,6 +250,9 @@ public class InGame : MonoBehaviour {
             checkD = quTMG.Gtd;
 
 		}
+
+		txtLuotNgu.text = "Lượt Ngu:" + GameController.instance.mNgu;
+		txtScore.text = "" + GameController.instance.mScore;
 	}
 
 

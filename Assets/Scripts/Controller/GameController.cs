@@ -30,11 +30,20 @@ public class GameController : MonoBehaviour {
 		GameOver
 	}
 
+	public int mScore = 0;
+	public int mNgu=3;
+
 	public State currentState;
 
 
 	string sText = "hailao";
 	public List<Question> lst=new List<Question>();
+
+	public void doReset()
+	{
+		mScore = 0;
+		mNgu=3;
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -53,6 +62,8 @@ public class GameController : MonoBehaviour {
 			Question qs = new Question (items[0],items[1],items[2],items[3],items[4],items[5],items[6],items[7],items[8],items[9],items[10],items[11]);
 			lst.Add (qs);
 		}
+
+
 	
 	}
 	
