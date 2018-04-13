@@ -20,6 +20,7 @@ public class GameOver : MonoBehaviour {
 
 	public void btnContinute_OnClick()
 	{
+        SoundManager.Instance.PlayAudioCick();
 		GameController.instance.doReset ();
 		PopUpController.instance.HideGameOver ();
 		PopUpController.instance.ShowMainGame ();

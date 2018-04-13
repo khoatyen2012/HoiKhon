@@ -83,6 +83,7 @@ public class MainGame : MonoBehaviour {
 
     public void btnPlay_OnClick()
     {
+        SoundManager.Instance.PlayAudioCick();
         PopUpController.instance.HideMainGame();
         PopUpController.instance.ShowInGame();
     }

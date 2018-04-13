@@ -17,6 +17,7 @@ public class NextGame : MonoBehaviour {
 
 	public void btnHoiTiep_OnClick()
 	{
+        SoundManager.Instance.PlayAudioCick();
 		PopUpController.instance.HideNextGame ();
 		PopUpController.instance.ShowInGame ();
 	}

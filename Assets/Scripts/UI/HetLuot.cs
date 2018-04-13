@@ -8,9 +8,10 @@ public class HetLuot : MonoBehaviour {
 
 	public void btnContinute_OnClick()
 	{
+        SoundManager.Instance.PlayAudioCick();
 		GameController.instance.currentState = GameController.State.Question;
 		PopUpController.instance.HideHetLuot ();
-		PopUpController.instance.ShowInGame ();
+	
 	}
 
 	// Use this for initialization

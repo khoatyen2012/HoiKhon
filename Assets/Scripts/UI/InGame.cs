@@ -73,7 +73,7 @@ public class InGame : MonoBehaviour {
 	{
 
 		if (selectcase.Equals (quTMG.Truecase)) {
-			
+            SoundManager.Instance.PlayAudioWin();
 			GameController.instance.mScore++;
 			txtScore.text = "" + GameController.instance.mScore;
 			GameController.instance.currentState = GameController.State.ReplyTrue;
@@ -81,6 +81,7 @@ public class InGame : MonoBehaviour {
 		} else {
 			
 			GameController.instance.currentState = GameController.State.ReplyFalse;
+            SoundManager.Instance.PlayAudioOver();
 			mesage.SetActive (true);
 			GameController.instance.mNgu--;
 			txtLuotNgu.text = "Lượt Ngu:" + GameController.instance.mNgu;
@@ -183,7 +184,9 @@ public class InGame : MonoBehaviour {
 		mesage.SetActive (false);
 		if (GameController.instance.mNgu <= 0) {
 			GameController.instance.currentState = GameController.State.GameOver;
+            CameraDrop.Instance.shakeDuration = 2f;
 			PopUpController.instance.HideInGame ();
+            SoundManager.Instance.PlayAudioGameOver();
             
             switch(quTMG.Truecase)
             {
@@ -237,6 +240,8 @@ public class InGame : MonoBehaviour {
 	{
 		if (GameController.instance.currentState == GameController.State.Question) {
 
+            SoundManager.Instance.PlayAudioGameOanh();
+
 			GameController.instance.mNext--;
 			if (GameController.instance.mNext == 0) {
 				GameController.instance.currentState = GameController.State.Next;
@@ -247,7 +252,7 @@ public class InGame : MonoBehaviour {
 
 				GameController.instance.currentState = GameController.State.HetLuot;
 				PopUpController.instance.ShowHetLuot ();
-				PopUpController.instance.HideInGame ();
+			
 			}
 		}
 	}
