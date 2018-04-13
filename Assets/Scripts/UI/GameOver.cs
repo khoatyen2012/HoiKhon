@@ -22,7 +22,7 @@ public class GameOver : MonoBehaviour {
 	{
 		GameController.instance.doReset ();
 		PopUpController.instance.HideGameOver ();
-		PopUpController.instance.ShowInGame ();
+		PopUpController.instance.ShowMainGame ();
 	}
 
 	// Use this for initialization

@@ -24,6 +24,18 @@ public class PopUpController : MonoBehaviour {
     public InGame inGame;
     public NextGame nextGame;
     public GameOver gameOver;
+	public HetLuot hetluot;
+
+	public void ShowHetLuot()
+	{
+		
+		hetluot.transform.position = new Vector3(hetluot.transform.position.x, showY, hetluot.transform.position.z);
+	}
+
+	public void HideHetLuot()
+	{
+		hetluot.transform.position = new Vector3(hetluot.transform.position.x, hideY, hetluot.transform.position.z);
+	}
 
 
     public void ShowGameOver(string pQue, string pDa, int pMax)

@@ -26,12 +26,14 @@ public class GameController : MonoBehaviour {
 		Question,
 		ReplyTrue,
 		ReplyFalse,
+		HetLuot,
 		Next,
 		GameOver
 	}
 
 	public int mScore = 0;
 	public int mNgu=3;
+	public int mNext=3;
 
 	public State currentState;
 
@@ -43,6 +45,7 @@ public class GameController : MonoBehaviour {
 	{
 		mScore = 0;
 		mNgu=3;
+		mNext=3;
 	}
 
 	// Use this for initialization

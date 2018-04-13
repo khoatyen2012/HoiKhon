@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\IO\ReadText.cs" />
      <Compile Include="Assets\Scripts\Mode\Question.cs" />
      <Compile Include="Assets\Scripts\UI\GameOver.cs" />
+     <Compile Include="Assets\Scripts\UI\HetLuot.cs" />
      <Compile Include="Assets\Scripts\UI\InGame.cs" />
      <Compile Include="Assets\Scripts\UI\MainGame.cs" />
      <Compile Include="Assets\Scripts\UI\NextGame.cs" />

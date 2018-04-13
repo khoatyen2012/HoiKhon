@@ -235,6 +235,21 @@ public class InGame : MonoBehaviour {
 
 	public void btnAvatar_OnClick()
 	{
+		if (GameController.instance.currentState == GameController.State.Question) {
+
+			GameController.instance.mNext--;
+			if (GameController.instance.mNext == 0) {
+				GameController.instance.currentState = GameController.State.Next;
+				PopUpController.instance.HideInGame ();
+				PopUpController.instance.ShowNextGame("Em xin thua,thật là dã man mà, đành phải cho bác qua câu này vậy. A hi hi đồ ckó");
+
+			} else if (GameController.instance.mNext < 0 && GameController.instance.mNext%3==0) {
+
+				GameController.instance.currentState = GameController.State.HetLuot;
+				PopUpController.instance.ShowHetLuot ();
+				PopUpController.instance.HideInGame ();
+			}
+		}
 	}
 
 	public void setData()
