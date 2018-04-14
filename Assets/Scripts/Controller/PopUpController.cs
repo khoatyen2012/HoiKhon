@@ -51,9 +51,9 @@ public class PopUpController : MonoBehaviour {
 
 
 
-	public void ShowNextGame(string pGT)
+	public void ShowNextGame(string pGT,bool ok)
     {
-		nextGame.setData (pGT);
+		nextGame.setData (pGT,ok);
         nextGame.transform.position = new Vector3(nextGame.transform.position.x, showY, nextGame.transform.position.z);
     }
 

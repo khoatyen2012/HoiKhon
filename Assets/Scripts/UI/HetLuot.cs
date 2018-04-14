@@ -11,7 +11,7 @@ public class HetLuot : MonoBehaviour {
         SoundManager.Instance.PlayAudioCick();
 		GameController.instance.currentState = GameController.State.Question;
 		PopUpController.instance.HideHetLuot ();
-	
+		PopUpController.instance.ShowInGame ();
 	}
 
 	// Use this for initialization

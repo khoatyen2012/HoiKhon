@@ -220,16 +220,16 @@ public class InGame : MonoBehaviour {
 		switch(quTMG.Truecase)
 		{
 		case "a":
-			PopUpController.instance.ShowNextGame(quTMG.Gta);
+			PopUpController.instance.ShowNextGame(quTMG.Gta,false);
 			break;
 		case "b":
-			PopUpController.instance.ShowNextGame(quTMG.Gtb);
+			PopUpController.instance.ShowNextGame(quTMG.Gtb,false);
 			break;
 		case "c":
-			PopUpController.instance.ShowNextGame(quTMG.Gtc);
+			PopUpController.instance.ShowNextGame(quTMG.Gtc,false);
 			break;
 		default:
-			PopUpController.instance.ShowNextGame(quTMG.Gtd);
+			PopUpController.instance.ShowNextGame(quTMG.Gtd,false);
 			break;
 		}
         
@@ -246,12 +246,13 @@ public class InGame : MonoBehaviour {
 			if (GameController.instance.mNext == 0) {
 				GameController.instance.currentState = GameController.State.Next;
 				PopUpController.instance.HideInGame ();
-				PopUpController.instance.ShowNextGame("Em xin thua,thật là dã man mà, đành phải cho bác qua câu này vậy. A hi hi đồ ckó");
+				PopUpController.instance.ShowNextGame("Em xin thua,thật là dã man mà, đành phải cho bác qua câu này vậy. A hi hi đồ ckó",true);
 
 			} else if (GameController.instance.mNext < 0 && GameController.instance.mNext%3==0) {
 
 				GameController.instance.currentState = GameController.State.HetLuot;
 				PopUpController.instance.ShowHetLuot ();
+				PopUpController.instance.HideInGame ();
 			
 			}
 		}
@@ -289,6 +290,74 @@ public class InGame : MonoBehaviour {
 
 		txtLuotNgu.text = "Lượt Ngu:" + GameController.instance.mNgu;
 		txtScore.text = "" + GameController.instance.mScore;
+		doRandonSprite ();
+	}
+
+	public void doRandonSprite()
+	{
+		int chon = UnityEngine.Random.Range (0, 20);
+		switch (chon) {
+		case 1:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_1");
+			break;
+		case 2:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_2");
+			break;
+		case 3:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_3");
+			break;
+		case 4:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_4");
+			break;
+		case 5:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_5");
+			break;
+		case 6:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_6");
+			break;
+		case 7:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_7");
+			break;
+		case 8:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_8");
+			break;
+		case 9:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_9");
+			break;
+		case 10:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_10");
+			break;
+		case 11:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_11");
+			break;
+		case 12:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_12");
+			break;
+		case 13:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_13");
+			break;
+		case 14:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_14");
+			break;
+		case 15:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_15");
+			break;
+		case 16:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_16");
+			break;
+		case 17:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_17");
+			break;
+		case 18:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_18");
+			break;
+		case 19:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_19");
+			break;
+		default:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_19");
+			break;
+		}
 	}
 
 
