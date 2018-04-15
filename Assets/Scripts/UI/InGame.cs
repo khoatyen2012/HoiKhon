@@ -33,6 +33,8 @@ public class InGame : MonoBehaviour {
 	string selectcase="";
 
 	List<Question> lst=new List<Question>();
+    int chonk = 0;
+    public int mScoreMax;
  
 
 
@@ -85,16 +87,17 @@ public class InGame : MonoBehaviour {
 			mesage.SetActive (true);
 			GameController.instance.mNgu--;
 			txtLuotNgu.text = "Lượt Ngu:" + GameController.instance.mNgu;
+            chonk = UnityEngine.Random.Range(0, 5);
             switch (selectcase)
             {
                 case "a":
                     if (quTMG.Gta.Trim().Equals(""))
                     {
-					if (GameController.instance.mScore % 3 == 0)
+                        if (chonk == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
                         }
-					else if (GameController.instance.mScore % 2 == 0)
+                        else if (chonk == 1)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
                         }
@@ -111,11 +114,11 @@ public class InGame : MonoBehaviour {
                 case "b":
                     if (quTMG.Gtb.Trim().Equals(""))
                     {
-					if (GameController.instance.mScore % 2 == 0)
+                        if (chonk == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
                         }
-					else if (GameController.instance.mScore % 3 == 0)
+                        else if (chonk == 1)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
                         }
@@ -132,11 +135,11 @@ public class InGame : MonoBehaviour {
                 case "c":
                     if (quTMG.Gtc.Trim().Equals(""))
                     {
-					if (GameController.instance.mScore % 4 == 0)
+                        if (chonk == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
                         }
-					else if (GameController.instance.mScore % 3 == 0)
+                        else if (chonk == 1)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
                         }
@@ -154,11 +157,11 @@ public class InGame : MonoBehaviour {
                 default:
                     if (quTMG.Gtd.Trim().Equals(""))
                     {
-					if (GameController.instance.mScore % 5 == 0)
+                        if (chonk == 0)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
                         }
-					else if (GameController.instance.mScore % 3 == 0)
+                        else if (chonk == 1)
                         {
                             mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
                         }
@@ -187,26 +190,33 @@ public class InGame : MonoBehaviour {
             CameraDrop.Instance.shakeDuration = 2f;
 			PopUpController.instance.HideInGame ();
             SoundManager.Instance.PlayAudioGameOver();
+
+            if (GameController.instance.mScore > mScoreMax)
+            {
+                mScoreMax = GameController.instance.mScore;
+                DataManager.SaveHightScore(mScoreMax);
+            }
             
             switch(quTMG.Truecase)
             {
                 case "a":
-                    PopUpController.instance.ShowGameOver (quTMG.Question2,quTMG.Da,12);
+                    PopUpController.instance.ShowGameOver(quTMG.Question2, quTMG.Da, mScoreMax);
                     break;
                 case "b":
-                    PopUpController.instance.ShowGameOver(quTMG.Question2, quTMG.Db, 12);
+                    PopUpController.instance.ShowGameOver(quTMG.Question2, quTMG.Db, mScoreMax);
                     break;
                 case "c":
-                    PopUpController.instance.ShowGameOver(quTMG.Question2, quTMG.Dc, 12);
+                    PopUpController.instance.ShowGameOver(quTMG.Question2, quTMG.Dc, mScoreMax);
                     break;
                 default:
-                    PopUpController.instance.ShowGameOver(quTMG.Question2, quTMG.Dd, 12);
+                    PopUpController.instance.ShowGameOver(quTMG.Question2, quTMG.Dd, mScoreMax);
                     break;
             }
 			
 
 		} else {
 			GameController.instance.currentState = GameController.State.Question;
+           
 		}
 
 	}
@@ -270,23 +280,26 @@ public class InGame : MonoBehaviour {
 
 	public void doSubGet()
 	{
-		if (lst.Count > 0) {
-			int chon = UnityEngine.Random.Range(0, lst.Count);
-			quTMG = lst [chon];
-			txtQuestion.text = quTMG.Question2;
-			txtDa.text =quTMG.Da;
-			txtDb.text = quTMG.Db;		
-			txtDc.text = quTMG.Dc;
-			txtDd.text = quTMG.Dd;
-			txtNickGame.text ="Nick Name:"+ quTMG.Nickname;
-			checkque = quTMG.Truecase;
+        if (lst.Count > 0)
+        {
+            int chon = UnityEngine.Random.Range(0, lst.Count);
+            quTMG = lst[chon];
+            txtQuestion.text = quTMG.Question2;
+            txtDa.text = quTMG.Da;
+            txtDb.text = quTMG.Db;
+            txtDc.text = quTMG.Dc;
+            txtDd.text = quTMG.Dd;
+            txtNickGame.text = "Nick Name:" + quTMG.Nickname;
+            checkque = quTMG.Truecase;
 
             checkA = quTMG.Gta;
             checkB = quTMG.Gtb;
             checkC = quTMG.Gtc;
             checkD = quTMG.Gtd;
+            lst.RemoveAt(chon);
 
-		}
+        }
+        
 
 		txtLuotNgu.text = "Lượt Ngu:" + GameController.instance.mNgu;
 		txtScore.text = "" + GameController.instance.mScore;
@@ -369,6 +382,7 @@ public class InGame : MonoBehaviour {
 		btnC.OnClick += btnC_OnClick;
 		btnD.OnClick += btnD_OnClick;
 		btnAvatar.OnClick += btnAvatar_OnClick;
+        mScoreMax = DataManager.GetHightScore();
 
 	}
 	

@@ -7,6 +7,19 @@ public class MainGame : MonoBehaviour {
 	float mRap=1f;
 	public tk2dSprite avatar;
     public tk2dUIItem btnPlay;
+    public tk2dUIItem btnShare;
+    public tk2dUIItem btnRate;
+
+
+    public void btnShare_OnClick()
+    {
+        ShareRate.Share();
+    }
+
+    public void btnRate_OnClick()
+    {
+        ShareRate.Rate();
+    }
 
 	public void setData()
 	{
@@ -91,6 +104,8 @@ public class MainGame : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         btnPlay.OnClick += btnPlay_OnClick;
+        btnRate.OnClick += btnRate_OnClick;
+        btnShare.OnClick += btnShare_OnClick;
 	}
 	
 	// Update is called once per frame

@@ -8,6 +8,7 @@ public class NextGame : MonoBehaviour {
 
 	public tk2dTextMesh txtGiaiThich;
 	public tk2dSprite Avatar;
+    public tk2dTextMesh txtTitle;
 
 	public void doRandonSprite()
 	{
@@ -15,30 +16,39 @@ public class NextGame : MonoBehaviour {
 		switch (chon) {
 		case 1:
 			Avatar.SetSprite ("e_1");
+            txtTitle.text = "Lầy Lội";
 			break;
 		case 2:
 			Avatar.SetSprite ("e_2");
+            txtTitle.text = "Thường Thôi";
 			break;
 		case 3:
 			Avatar.SetSprite ("e_3");
+            txtTitle.text = "Bá Đạo";
 			break;
 		case 4:
 			Avatar.SetSprite ("e_4");
+            txtTitle.text = "Chuẩn CMNR !";
 			break;
 		case 5:
 			Avatar.SetSprite ("e_5");
+            txtTitle.text = "Khôn VL";
 			break;
 		case 6:
 			Avatar.SetSprite ("e_6");
+            txtTitle.text = "Ngon Zaj Đấy";
 			break;
 		case 7:
 			Avatar.SetSprite ("e_7");
+            txtTitle.text = "Được Lắm";
 			break;
 		case 8:
 			Avatar.SetSprite ("e_8");
+            txtTitle.text = "Khôn Như Cờ ho'";
 			break;
 		case 9:
 			Avatar.SetSprite ("e_9");
+            txtTitle.text = "Đẹp zaj'";
 			break;
 		case 10:
 			Avatar.SetSprite ("e_10");
