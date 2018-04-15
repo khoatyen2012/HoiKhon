@@ -94,6 +94,9 @@ public class NextGame : MonoBehaviour {
 		} else {
 			doRandonSprite ();
 		}
+
+        AdmobManger.Instance.RequestBanner();
+        AdmobManger.Instance.ShowBanner();
 	}
 
 
@@ -103,6 +106,8 @@ public class NextGame : MonoBehaviour {
         SoundManager.Instance.PlayAudioCick();
 		PopUpController.instance.HideNextGame ();
 		PopUpController.instance.ShowInGame ();
+
+        AdmobManger.Instance.HidewBanner();
 	}
 
 	// Use this for initialization

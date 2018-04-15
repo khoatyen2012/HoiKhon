@@ -227,6 +227,7 @@ public class InGame : MonoBehaviour {
         yield return new WaitForSeconds(time);
         GameController.instance.currentState = GameController.State.Next;
         PopUpController.instance.HideInGame();
+       
 		switch(quTMG.Truecase)
 		{
 		case "a":

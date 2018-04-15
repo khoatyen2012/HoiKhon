@@ -100,10 +100,19 @@ public class GameOver : MonoBehaviour {
         txtDiemSo.text = "Điểm số:"+GameController.instance.mScore;
         txtDiemCao.text = "Điểm cao nhất:" + pMax;
 		doRandonSprite ();
+        if (GameController.instance.mScore % 2 == 0)
+        {
+            AdmobManger.Instance.LoadAdsInterstitial();
+        }
     }
 
 	public void btnContinute_OnClick()
 	{
+        if (GameController.instance.mScore % 2 == 0)
+        {
+            AdmobManger.Instance.ShowAdsInterstitial();
+        }
+
         SoundManager.Instance.PlayAudioCick();
 		GameController.instance.doReset ();
 		PopUpController.instance.HideGameOver ();
