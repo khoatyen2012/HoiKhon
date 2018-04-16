@@ -9,7 +9,13 @@ public class MainGame : MonoBehaviour {
     public tk2dUIItem btnPlay;
     public tk2dUIItem btnShare;
     public tk2dUIItem btnRate;
+    public tk2dUIItem btnAddQuestion;
 
+    public void btnAddQuestion_OnClick()
+    {
+        PopUpController.instance.ShowAddQuesstion();
+        PopUpController.instance.HideMainGame();
+    }
 
     public void btnShare_OnClick()
     {
@@ -106,6 +112,7 @@ public class MainGame : MonoBehaviour {
         btnPlay.OnClick += btnPlay_OnClick;
         btnRate.OnClick += btnRate_OnClick;
         btnShare.OnClick += btnShare_OnClick;
+        btnAddQuestion.OnClick += btnAddQuestion_OnClick;
 	}
 	
 	// Update is called once per frame

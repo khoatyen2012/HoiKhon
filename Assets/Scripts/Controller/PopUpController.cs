@@ -26,6 +26,19 @@ public class PopUpController : MonoBehaviour {
     public GameOver gameOver;
 	public HetLuot hetluot;
 
+    public AddQuestion addQuestion;
+
+    public void ShowAddQuesstion()
+    {
+        addQuestion.setData();
+        addQuestion.transform.position = new Vector3(addQuestion.transform.position.x, showY, addQuestion.transform.position.z);
+    }
+
+    public void HideAddQuesstion()
+    {
+        addQuestion.transform.position = new Vector3(addQuestion.transform.position.x, hideY, addQuestion.transform.position.z);
+    }
+
 	public void ShowHetLuot()
 	{
 		

@@ -94,6 +94,7 @@
      <Compile Include="Assets\Scripts\Manager\DataManager.cs" />
      <Compile Include="Assets\Scripts\Manager\SoundManager.cs" />
      <Compile Include="Assets\Scripts\Mode\Question.cs" />
+     <Compile Include="Assets\Scripts\UI\AddQuestion.cs" />
      <Compile Include="Assets\Scripts\UI\GameOver.cs" />
      <Compile Include="Assets\Scripts\UI\HetLuot.cs" />
      <Compile Include="Assets\Scripts\UI\InGame.cs" />
