@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "414276290839",
+    "firebase_url": "https://first-skein-774.firebaseio.com",
+    "project_id": "first-skein-774"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:414276290839:android:f8d15b1531a367c1",
+        "android_client_info": {
+          "package_name": "hoixoay.hoingu.dapxoay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "414276290839-iha6qgaobn30viq3lbe5kf9el8eka6sm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "hoixoay.hoingu.dapxoay",
+            "certificate_hash": "a5bb74282a44cfdcc9d774037cc1dafc1a802c6c"
+          }
+        },
+        {
+          "client_id": "414276290839-qnlltnqlk6b1o7rh85031sdkeb1pgnhh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsncwEVXWPEsZrYCcYKYNGplArqaGI5Pw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "414276290839-qnlltnqlk6b1o7rh85031sdkeb1pgnhh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
