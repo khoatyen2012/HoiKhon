@@ -138,46 +138,32 @@
      <Compile Include="Assets\TK2DROOT\tk2dUI\Editor\Core\tk2dUIMaskEditor.cs" />
      <Compile Include="Assets\TK2DROOT\tk2dUI\Editor\Core\tk2dUIMethodBindingHelper.cs" />
      <Compile Include="Assets\TK2DROOT\tk2dUI\Editor\Core\tk2dUISpriteAnimatorEditor.cs" />
-     <None Include="Assets\Plugins\Android\com.google.firebase.firebase-iid-12.0.1\AndroidManifest.xml" />
-     <None Include="Assets\Plugins\Android\Firebase\res\values\google-services.xml" />
      <None Include="Assets\PlayServicesResolver\Editor\play-services-resolver_v1.2.64.0.txt" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\LitSolidVertexColor.shader" />
-     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-auth-unity\maven-metadata.xml" />
      <None Include="Assets\TK2DROOT\tk2d\Goodies\TexturePacker\Exporter\2dtoolkit\exporter.xml" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\SolidVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2dUI\Shaders\DepthMask.shader" />
-     <None Include="Assets\Firebase\Plugins\link.xml" />
      <None Include="Assets\Fonts\font.fnt" />
      <None Include="Assets\Resources\hailao.txt" />
-     <None Include="Assets\Firebase\Editor\FirebaseAuth_v4.5.1_manifest.txt" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\LitPremulVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\PremulVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2d_demo\Credits.txt" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\goodies\PackedTextMesh.shader" />
-     <None Include="Assets\Plugins\Android\Firebase\AndroidManifest.xml" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\Blend2TexVertexColor.shader" />
-     <None Include="Assets\Firebase\Editor\AppDependencies.xml" />
      <None Include="Assets\TK2DROOT\tk2dUI\Shaders\DepthMaskSolid.shader" />
      <None Include="Assets\TK2DROOT\tk2dUI_demo\Assets\Dark\Fonts\Nunito24.fnt" />
-     <None Include="Assets\Plugins\Android\com.google.firebase.firebase-core-12.0.1\AndroidManifest.xml" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\resources\BlendVertexColor.shader" />
-     <None Include="Assets\Firebase\Editor\AuthDependencies.xml" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\LitCutoutVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2d\Editor\EditorUtility.shader" />
-     <None Include="Assets\Firebase\m2repository\com\google\firebase\firebase-app-unity\maven-metadata.xml" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\CutoutVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2d_demo\demobmfont\test.fnt" />
      <None Include="Assets\Plugins\Android\GoogleMobileAdsPlugin\AndroidManifest.xml" />
      <None Include="Assets\TK2DROOT\tk2dUI_demo\Assets\Font\OldSansBlack\OldSansBlack.fnt" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\LitBlendVertexColor.shader" />
      <None Include="Assets\TK2DROOT\tk2dUI_demo\Assets\Dark\Fonts\Nunito16.fnt" />
-     <None Include="Assets\Plugins\Android\com.google.firebase.firebase-core-12.0.1\R.txt" />
      <None Include="Assets\TK2DROOT\tk2dUI_demo\Assets\Dark\Fonts\Nunito32.fnt" />
      <None Include="Assets\GoogleMobileAds\Editor\GoogleMobileAdsDependencies.xml" />
-     <None Include="Assets\Firebase\Plugins\Http\link.xml" />
-     <None Include="Assets\Plugins\Android\com.google.firebase.firebase-common-12.0.1\AndroidManifest.xml" />
      <None Include="Assets\TK2DROOT\tk2d\Shaders\AdditiveVertexColor.shader" />
-     <None Include="Assets\Firebase\Editor\FirebaseDatabase_v4.5.1_manifest.txt" />
      <None Include="Assets\TK2DROOT\tk2d_demo\democameradata\source\democamerafont.fnt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -203,23 +189,14 @@
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
- <Reference Include="Google.IOSResolver_v1.2.64.0">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.64.0.dll</HintPath>
- </Reference>
- <Reference Include="Google.JarResolver_v1.2.64.0">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.64.0.dll</HintPath>
- </Reference>
  <Reference Include="Google.VersionHandler">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
- </Reference>
- <Reference Include="Google.VersionHandlerImpl_v1.2.64.0">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/PlayServicesResolver/Editor/Google.VersionHandlerImpl_v1.2.64.0.dll</HintPath>
+ <HintPath>D:/vtc/HoiKhon/HoiKhon/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
  </Reference>
  <Reference Include="tk2dExternal">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/TK2DROOT/tk2d/Editor/tk2dExternal.dll</HintPath>
+ <HintPath>D:/vtc/HoiKhon/HoiKhon/Assets/TK2DROOT/tk2d/Editor/tk2dExternal.dll</HintPath>
  </Reference>
  <Reference Include="tk2dSkin">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/TK2DROOT/tk2d/Editor/tk2dSkin.dll</HintPath>
+ <HintPath>D:/vtc/HoiKhon/HoiKhon/Assets/TK2DROOT/tk2d/Editor/tk2dSkin.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -229,33 +206,6 @@
  </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Compat">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
- </Reference>
- <Reference Include="Google.MiniJson">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Database">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
- </Reference>
- <Reference Include="Google.Sharpen">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Platform">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Tasks">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Editor">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Auth">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.App">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

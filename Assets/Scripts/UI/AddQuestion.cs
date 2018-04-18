@@ -4,9 +4,9 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine.SceneManagement;
-using Firebase;
-using Firebase.Database;
-using Firebase.Unity.Editor;
+//using Firebase;
+//using Firebase.Database;
+//using Firebase.Unity.Editor;
 using System;
 
 public class AddQuestion : MonoBehaviour {
@@ -26,7 +26,7 @@ public class AddQuestion : MonoBehaviour {
     string mTraLoi = "";
     string mGiaiThich = "";
 
-	DatabaseReference mDatabaseRef;
+	//DatabaseReference mDatabaseRef;
 
 
     public void setData()
@@ -83,7 +83,7 @@ public class AddQuestion : MonoBehaviour {
 		QuestionUD qs = new QuestionUD (id, datetime, mName, mQuestion, mTraLoi, mGiaiThich);
 		string json = JsonUtility.ToJson(qs);
 
-			mDatabaseRef.Child("questions").Child(datetime).Child(id).SetRawJsonValueAsync(json);
+			//mDatabaseRef.Child("questions").Child(datetime).Child(id).SetRawJsonValueAsync(json);
 
 			txtThongBao.text = "Gửi câu hỏi thành công. Chân thành cảm ơn !";
 		}catch (Exception ex)
@@ -109,8 +109,8 @@ public class AddQuestion : MonoBehaviour {
         btnGuiCauHoi.OnClick += btnGuiCauHoi_OnClick;
 
 		// Set this before calling into the realtime database.
-		FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://first-skein-774.firebaseio.com/");
-		mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
+		//FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://first-skein-774.firebaseio.com/");
+		//mDatabaseRef = FirebaseDatabase.DefaultInstance.RootReference;
 
 	}
 
