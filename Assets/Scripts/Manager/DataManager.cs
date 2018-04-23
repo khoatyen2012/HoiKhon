@@ -7,6 +7,25 @@ public class DataManager  {
 
     //get lai gia tri second cua bai 3 khi con thong thai.
 
+	private static string TAG_VUOTQUA = "mymac";
+
+	public static string GetVuotQua()
+	{
+		if (PlayerPrefs.HasKey(TAG_VUOTQUA))
+		{
+			return PlayerPrefs.GetString(TAG_VUOTQUA);
+		}
+		else
+		{
+			return "";
+		}
+	}
+
+	public static void SaveVuotQua(string newHightScore)
+	{
+		PlayerPrefs.SetString(TAG_VUOTQUA, newHightScore);
+	}
+
     public static int GetHightScore()
     {
         if (PlayerPrefs.HasKey(TAG_HIGHT))

@@ -228,29 +228,29 @@
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
- <Reference Include="Unity.Compat">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
- </Reference>
- <Reference Include="Google.MiniJson">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Database">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
- </Reference>
- <Reference Include="Google.Sharpen">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
- </Reference>
- <Reference Include="Firebase.Platform">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Tasks">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
+ <Reference Include="Firebase.App">
+ <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Auth">
  <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Firebase.Auth.dll</HintPath>
  </Reference>
- <Reference Include="Firebase.App">
- <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Firebase.App.dll</HintPath>
+ <Reference Include="Firebase.Database">
+ <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Firebase.Database.dll</HintPath>
+ </Reference>
+ <Reference Include="Firebase.Platform">
+ <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Firebase.Platform.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.MiniJson">
+ <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Google.MiniJson.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.Sharpen">
+ <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Firebase/Plugins/Google.Sharpen.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Compat">
+ <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Parse/Plugins/Unity.Compat.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Tasks">
+ <HintPath>E:/CKH/UnityProject/HoiKhon/HoiKhon/Assets/Parse/Plugins/Unity.Tasks.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

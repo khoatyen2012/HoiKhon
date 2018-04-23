@@ -40,6 +40,7 @@ public class GameController : MonoBehaviour {
 
 	string sText = "hailao";
 	public List<Question> lst=new List<Question>();
+	public List<string> lstVuotQua=new List<string>();
 
 	public void doReset()
 	{
@@ -53,6 +54,23 @@ public class GameController : MonoBehaviour {
 	
 		string ss = ReadText.readTextFile(sText);
 		GetDaTa (ss);
+
+		string stVuotQua = DataManager.GetVuotQua ();
+		if (stVuotQua.Equals ("")) {
+			
+		} else {
+			if (stVuotQua.Contains ("+")) {
+
+				string[] mang = stVuotQua.Split ('+');
+				for (int i = 0; i < mang.Length; i++) {
+					lstVuotQua.Add (mang [i]);
+				}
+
+
+			} else {
+				lstVuotQua.Add (stVuotQua);
+			}
+		}
 
 	}
 
