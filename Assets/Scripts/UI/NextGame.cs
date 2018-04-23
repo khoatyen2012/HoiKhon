@@ -90,7 +90,7 @@ public class NextGame : MonoBehaviour {
 	{
 		txtGiaiThich.text = "" + pGT;
 		if (ok) {
-			Avatar.SetSprite ("e_16");
+			Avatar.SetSprite ("e_9");
 		} else {
 			doRandonSprite ();
 		}

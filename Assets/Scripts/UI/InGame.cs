@@ -212,6 +212,25 @@ public class InGame : MonoBehaviour {
                     PopUpController.instance.ShowGameOver(quTMG.Question2, quTMG.Dd, mScoreMax);
                     break;
             }
+
+
+            //Luu lai cac id da vuot qua
+            if (GameController.instance.lstVuotQua.Count > 0)
+            {
+                string tamtr = "";
+                for (int i = 0; i < GameController.instance.lstVuotQua.Count; i++)
+                {
+                    if (i == 0)
+                    {
+                        tamtr += "" + GameController.instance.lstVuotQua[0];
+                    }
+                    else
+                    {
+                        tamtr += "+" + GameController.instance.lstVuotQua[i];
+                    }
+                }
+                DataManager.SaveVuotQua(tamtr);
+            }
 			
 
 		} else {
@@ -243,6 +262,11 @@ public class InGame : MonoBehaviour {
 			PopUpController.instance.ShowNextGame(quTMG.Gtd,false);
 			break;
 		}
+
+        //Them id da vuot qua vao danh sach
+        GameController.instance.lstVuotQua.Add(quTMG.Id);
+
+
         
     
     }
@@ -273,7 +297,28 @@ public class InGame : MonoBehaviour {
 	{
 		GameController.instance.currentState = GameController.State.Question;
 		if (lst.Count <= 0) {
-			lst = GameController.instance.lst;
+	
+            for (int i = 0; i < GameController.instance.lstVuotQua.Count; i++)
+            {
+                for (int k = 0; k < GameController.instance.lst.Count; k++)
+                {
+                    if (GameController.instance.lstVuotQua[i].Equals(GameController.instance.lst[k].Id))
+                    {
+                        continue;
+                    }
+
+                    lst.Add(GameController.instance.lst[k]);
+
+                }
+            }
+
+            if (lst.Count <= 0)
+            {
+                lst = GameController.instance.lst;
+                DataManager.SaveVuotQua("");
+                GameController.instance.lstVuotQua.Clear();
+                GameController.instance.lstVuotQua = new List<string>();
+            }
 		}
 
 		doSubGet ();
