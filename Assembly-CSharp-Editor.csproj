@@ -189,6 +189,12 @@
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
+ <Reference Include="Google.IOSResolver_v1.2.64.0">
+ <HintPath>D:/vtc/HoiNguGif/HoiKhon/Assets/PlayServicesResolver/Editor/Google.IOSResolver_v1.2.64.0.dll</HintPath>
+ </Reference>
+ <Reference Include="Google.JarResolver_v1.2.64.0">
+ <HintPath>D:/vtc/HoiNguGif/HoiKhon/Assets/PlayServicesResolver/Editor/Google.JarResolver_v1.2.64.0.dll</HintPath>
+ </Reference>
  <Reference Include="Google.VersionHandler">
  <HintPath>D:/vtc/HoiNguGif/HoiKhon/Assets/PlayServicesResolver/Editor/Google.VersionHandler.dll</HintPath>
  </Reference>

@@ -7,6 +7,8 @@ public class ShareRate
 	public static string titleShare = "Hỏi Ngu - Thách Thức Sự Trong Sáng";
     public static string LinkShare = "https://play.google.com/store/apps/details?id=hoixoay.hoingu.dapxoay";
 
+    public static string LinkShareBalo = "https://play.google.com/store/apps/developer?id=Balo+Studios";
+
 
     public static void Share()
     {
@@ -43,7 +45,11 @@ public class ShareRate
         Application.OpenURL(LinkShare);
     }
 
-   
+    public static void RateBalo()
+    {
+        Application.OpenURL(LinkShareBalo);
+    }
+
 
 
 }

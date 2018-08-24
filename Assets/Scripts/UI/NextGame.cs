@@ -5,6 +5,7 @@ public class NextGame : MonoBehaviour {
 
 
 	public tk2dUIItem btnHoiTiep;
+    public tk2dUIItem btnBalo;
 
 	public tk2dTextMesh txtGiaiThich;
 	public tk2dSprite Avatar;
@@ -110,9 +111,15 @@ public class NextGame : MonoBehaviour {
         AdmobManger.Instance.HidewBanner();
 	}
 
+    public void btnBalo_OnClick()
+    {
+        ShareRate.RateBalo();
+    }
+
 	// Use this for initialization
 	void Start () {
 		btnHoiTiep.OnClick += btnHoiTiep_OnClick;
+        btnBalo.OnClick += btnBalo_OnClick;
 	}
 	
 	// Update is called once per frame
