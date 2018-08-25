@@ -318,6 +318,7 @@ public class InGame : MonoBehaviour {
                 DataManager.SaveVuotQua("");
                 GameController.instance.lstVuotQua.Clear();
                 GameController.instance.lstVuotQua = new List<string>();
+				Debug.Log ("Deo có");
             }
 		}
 

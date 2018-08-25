@@ -7,7 +7,7 @@ public class DataManager  {
 
     //get lai gia tri second cua bai 3 khi con thong thai.
 
-	private static string TAG_VUOTQUA = "mymac";
+	private static string TAG_VUOTQUA = "vuotqua";
 
 	public static string GetVuotQua()
 	{
