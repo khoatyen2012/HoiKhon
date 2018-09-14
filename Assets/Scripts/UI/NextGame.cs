@@ -104,16 +104,32 @@ public class NextGame : MonoBehaviour {
 
 	public void btnHoiTiep_OnClick()
 	{
+		try
+		{
         SoundManager.Instance.PlayAudioCick();
 		PopUpController.instance.HideNextGame ();
 		PopUpController.instance.ShowInGame ();
 
         AdmobManger.Instance.HidewBanner();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
     public void btnBalo_OnClick()
     {
+		try
+		{
         ShareRate.RateBalo();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 	// Use this for initialization

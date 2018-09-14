@@ -13,18 +13,42 @@ public class MainGame : MonoBehaviour {
 
     public void btnAddQuestion_OnClick()
     {
+		try
+		{
         PopUpController.instance.ShowAddQuesstion();
         PopUpController.instance.HideMainGame();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     public void btnShare_OnClick()
     {
+		try
+		{
         ShareRate.Share();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
     public void btnRate_OnClick()
     {
+		try
+		{
         ShareRate.Rate();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 	public void setData()
@@ -35,7 +59,7 @@ public class MainGame : MonoBehaviour {
 
 	public void doRandonSprite()
 	{
-		int chon = UnityEngine.Random.Range (0, 20);
+		int chon = UnityEngine.Random.Range (0, 25);
 		switch (chon) {
 		case 1:
 			avatar.SetSprite ("e_1");
@@ -94,25 +118,47 @@ public class MainGame : MonoBehaviour {
 		case 19:
 			avatar.SetSprite ("e_19");
 			break;
+		case 20:
+			avatar.SetSprite ("duongtang1");
+			break;
+		case 21:
+			avatar.SetSprite ("duongtang2");
+			break;
 		default:
-			avatar.SetSprite ("e_19");
+			avatar.SetSprite ("duongtang3");
 			break;
 		}
 	}
 
     public void btnPlay_OnClick()
     {
+		try
+		{
         SoundManager.Instance.PlayAudioCick();
         PopUpController.instance.HideMainGame();
         PopUpController.instance.ShowInGame();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 	// Use this for initialization
 	void Start () {
+		try
+		{
         btnPlay.OnClick += btnPlay_OnClick;
         btnRate.OnClick += btnRate_OnClick;
         btnShare.OnClick += btnShare_OnClick;
         btnAddQuestion.OnClick += btnAddQuestion_OnClick;
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 	
 	// Update is called once per frame

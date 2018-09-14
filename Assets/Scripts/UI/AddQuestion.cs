@@ -47,7 +47,9 @@ public class AddQuestion : MonoBehaviour {
 
     public void btnGuiCauHoi_OnClick()
     {
-		
+	
+		try
+		{
         mName = txtName.text;
         mQuestion = txtQuestion.text;
         mTraLoi = txtTraLoi.text;
@@ -69,6 +71,12 @@ public class AddQuestion : MonoBehaviour {
 
 
         doDefault();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 
     }
 
@@ -97,9 +105,17 @@ public class AddQuestion : MonoBehaviour {
 
     public void btnBack_OnClick()
     {
+		try
+		{
         doDefault();
         PopUpController.instance.HideAddQuesstion();
         PopUpController.instance.ShowMainGame();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
     }
 
 

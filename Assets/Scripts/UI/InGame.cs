@@ -40,33 +40,65 @@ public class InGame : MonoBehaviour {
 
 	public void btnA_OnClick()
 	{
+		try
+		{
 		if (GameController.instance.currentState == GameController.State.Question) {
 			selectcase = "a";
 			doXuLy ();
+		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
 		}
 	}
 
 	public void btnB_OnClick()
 	{
+		try
+		{
 		if (GameController.instance.currentState == GameController.State.Question) {
 			selectcase = "b";
 			doXuLy ();
+		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
 		}
 	}
 
 	public void btnC_OnClick()
 	{
+		try
+		{
 		if (GameController.instance.currentState == GameController.State.Question) {
 			selectcase = "c";
 			doXuLy ();
+		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
 		}
 	}
 
 	public void btnD_OnClick()
 	{
+		try
+		{
 		if (GameController.instance.currentState == GameController.State.Question) {
 			selectcase = "d";
 			doXuLy ();
+		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
 		}
 	}
 
@@ -273,6 +305,8 @@ public class InGame : MonoBehaviour {
 
 	public void btnAvatar_OnClick()
 	{
+		try
+		{
 		if (GameController.instance.currentState == GameController.State.Question) {
 
             SoundManager.Instance.PlayAudioGameOanh();
@@ -290,6 +324,12 @@ public class InGame : MonoBehaviour {
 				PopUpController.instance.HideInGame ();
 			
 			}
+		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
 		}
 	}
 
@@ -355,7 +395,7 @@ public class InGame : MonoBehaviour {
 
 	public void doRandonSprite()
 	{
-		int chon = UnityEngine.Random.Range (0, 20);
+		int chon = UnityEngine.Random.Range (0, 25);
 		switch (chon) {
 		case 1:
 			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_1");
@@ -414,8 +454,14 @@ public class InGame : MonoBehaviour {
 		case 19:
 			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_19");
 			break;
+		case 20:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("duongtang1");
+			break;
+		case 21:
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("duongtang2");
+			break;	
 		default:
-			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("e_19");
+			btnAvatar.GetComponent<tk2dSprite>().SetSprite ("duongtang3");
 			break;
 		}
 	}
@@ -424,12 +470,20 @@ public class InGame : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
+		try
+		{
 		btnA.OnClick += btnA_OnClick;
 		btnB.OnClick += btnB_OnClick;
 		btnC.OnClick += btnC_OnClick;
 		btnD.OnClick += btnD_OnClick;
 		btnAvatar.OnClick += btnAvatar_OnClick;
         mScoreMax = DataManager.GetHightScore();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 
 	}
 	

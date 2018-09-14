@@ -17,7 +17,7 @@ public class GameOver : MonoBehaviour {
 
 	public void doRandonSprite()
 	{
-		int chon = UnityEngine.Random.Range (0, 20);
+		int chon = UnityEngine.Random.Range (0, 25);
 		switch (chon) {
 		case 1:
 			avatar.SetSprite ("e_1");
@@ -87,8 +87,14 @@ public class GameOver : MonoBehaviour {
 		case 19:
 			avatar.SetSprite ("e_19");
 			break;
+		case 20:
+			avatar.SetSprite ("duongtang1");
+			break;
+		case 21:
+			avatar.SetSprite ("duongtang2");
+			break;
 		default:
-			avatar.SetSprite ("e_19");
+			avatar.SetSprite ("duongtang3");
 			break;
 		}
 	}
@@ -108,6 +114,8 @@ public class GameOver : MonoBehaviour {
 
 	public void btnContinute_OnClick()
 	{
+		try
+		{
         if (GameController.instance.mScore % 2 == 0)
         {
             AdmobManger.Instance.ShowAdsInterstitial();
@@ -117,6 +125,12 @@ public class GameOver : MonoBehaviour {
 		GameController.instance.doReset ();
 		PopUpController.instance.HideGameOver ();
 		PopUpController.instance.ShowMainGame ();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
 	}
 
 	// Use this for initialization

@@ -52,6 +52,8 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 	
+		try
+		{
 		string ss = ReadText.readTextFile(sText);
 		GetDaTa (ss);
 
@@ -70,6 +72,12 @@ public class GameController : MonoBehaviour {
 			} else {
 				lstVuotQua.Add (stVuotQua);
 			}
+		}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
 		}
 
 	}
