@@ -41,6 +41,7 @@ public class GameController : MonoBehaviour {
 	string sText = "hailao";
 	public List<Question> lst=new List<Question>();
 	public List<string> lstVuotQua=new List<string>();
+	public bool checkVoulumOpen=true;
 
 	public void doReset()
 	{

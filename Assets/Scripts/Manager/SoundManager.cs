@@ -23,27 +23,37 @@ public class SoundManager : MonoBehaviour {
 
     public void PlayAudioCick()
     {
-        tk2dUIAudioManager.Instance.Play(arrAudioClip[0]);
+		if (GameController.instance.checkVoulumOpen) {
+			tk2dUIAudioManager.Instance.Play (arrAudioClip [0]);
+		}
     }
 
     public void PlayAudioOver()
     {
-        tk2dUIAudioManager.Instance.Play(arrAudioClip[1]);
+		if (GameController.instance.checkVoulumOpen) {
+			tk2dUIAudioManager.Instance.Play (arrAudioClip [1]);
+		}
     }
 
     public void PlayAudioGameOver()
     {
-        tk2dUIAudioManager.Instance.Play(arrAudioClip[2]);
+		if (GameController.instance.checkVoulumOpen) {
+			tk2dUIAudioManager.Instance.Play (arrAudioClip [2]);
+		}
     }
 
     public void PlayAudioGameOanh()
     {
-        tk2dUIAudioManager.Instance.Play(arrAudioClip[3]);
+		if (GameController.instance.checkVoulumOpen) {
+			tk2dUIAudioManager.Instance.Play (arrAudioClip [3]);
+		}
     }
 
     public void PlayAudioWin()
     {
-        tk2dUIAudioManager.Instance.Play(arrAudioClip[4]);
+		if (GameController.instance.checkVoulumOpen) {
+			tk2dUIAudioManager.Instance.Play (arrAudioClip [4]);
+		}
     }
 
 	// Use this for initialization

@@ -10,6 +10,46 @@ public class MainGame : MonoBehaviour {
     public tk2dUIItem btnShare;
     public tk2dUIItem btnRate;
     public tk2dUIItem btnAddQuestion;
+	public tk2dUIItem btnPower;
+	public tk2dUIItem btnVolums;
+
+	void btnVolums_OnClick()
+	{
+		try
+		{
+			if(GameController.instance.checkVoulumOpen)
+			{
+				btnVolums.transform.GetComponent<tk2dSprite>().SetSprite("vollock");
+				SoundManager.Instance.PlayAudioCick();
+				GameController.instance.checkVoulumOpen=false;
+			}else
+			{
+				btnVolums.transform.GetComponent<tk2dSprite>().SetSprite("volopen");
+
+				GameController.instance.checkVoulumOpen=true;
+				SoundManager.Instance.PlayAudioCick();
+			}
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
+
+	}
+
+	public void btnPower_OnClick()
+	{
+		try
+		{
+			Application.Quit();
+		}
+		catch (System.Exception)
+		{
+
+			throw;
+		}
+	}
 
     public void btnAddQuestion_OnClick()
     {
@@ -153,6 +193,8 @@ public class MainGame : MonoBehaviour {
         btnRate.OnClick += btnRate_OnClick;
         btnShare.OnClick += btnShare_OnClick;
         btnAddQuestion.OnClick += btnAddQuestion_OnClick;
+		btnPower.OnClick+=btnPower_OnClick;
+		btnVolums.OnClick += btnVolums_OnClick;
 		}
 		catch (System.Exception)
 		{
