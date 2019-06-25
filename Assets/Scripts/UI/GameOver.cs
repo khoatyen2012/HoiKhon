@@ -49,7 +49,7 @@ public class GameOver : MonoBehaviour {
 			break;
 		case 8:
 			avatar.SetSprite ("e_8");
-            txtTitle.text = "Bực mình";
+            txtTitle.text = "Chư Bát Lợn";
 			break;
 		case 9:
 			avatar.SetSprite ("e_9");
@@ -61,7 +61,7 @@ public class GameOver : MonoBehaviour {
 			break;
 		case 11:
 			avatar.SetSprite ("e_11");
-            txtTitle.text = "Tha Thu";
+            txtTitle.text = "Đầu Heo";
 			break;
 		case 12:
 			avatar.SetSprite ("e_12");

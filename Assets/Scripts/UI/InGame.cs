@@ -119,23 +119,32 @@ public class InGame : MonoBehaviour {
 			mesage.SetActive (true);
 			GameController.instance.mNgu--;
 			txtLuotNgu.text = "Lượt Ngu:" + GameController.instance.mNgu;
-            chonk = UnityEngine.Random.Range(0, 5);
+            
             switch (selectcase)
             {
                 case "a":
                     if (quTMG.Gta.Trim().Equals(""))
                     {
+                        chonk = UnityEngine.Random.Range(0, 5);
                         if (chonk == 0)
                         {
-                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ ngu vkl :))";
                         }
                         else if (chonk == 1)
                         {
-                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ ngu vđ @@";
+                        }
+                        else if (chonk == 2)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ chưa lấy dc kinh đâu :))";
+                        }
+                        else if (chonk == 3)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ yếu sl oy :))";
                         }
                         else
                         {
-                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Óc chó có thật :))";
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ xin dừng bước";
                         }
                     }
                     else
@@ -146,17 +155,26 @@ public class InGame : MonoBehaviour {
                 case "b":
                     if (quTMG.Gtb.Trim().Equals(""))
                     {
+                        chonk = UnityEngine.Random.Range(0, 5);
                         if (chonk == 0)
                         {
-                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ ngu vkl :))";
                         }
                         else if (chonk == 1)
                         {
-                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ ngu vđ @@";
+                        }
+                        else if (chonk == 2)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ chưa lấy dc kinh đâu :))";
+                        }
+                        else if (chonk == 3)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ yếu sl oy :))";
                         }
                         else
                         {
-                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Óc chó có thật :))";
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ xin dừng bước";
                         }
                     }
                     else
@@ -167,17 +185,26 @@ public class InGame : MonoBehaviour {
                 case "c":
                     if (quTMG.Gtc.Trim().Equals(""))
                     {
+                        chonk = UnityEngine.Random.Range(0, 5);
                         if (chonk == 0)
                         {
-                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ ngu vkl :))";
                         }
                         else if (chonk == 1)
                         {
-                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ ngu vđ @@";
+                        }
+                        else if (chonk == 2)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ chưa lấy dc kinh đâu :))";
+                        }
+                        else if (chonk == 3)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ yếu sl oy :))";
                         }
                         else
                         {
-                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Óc chó có thật :))";
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ xin dừng bước";
                         }
                     }
                     else
@@ -189,17 +216,26 @@ public class InGame : MonoBehaviour {
                 default:
                     if (quTMG.Gtd.Trim().Equals(""))
                     {
+                        chonk = UnityEngine.Random.Range(0, 5);
                         if (chonk == 0)
                         {
-                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vkl :))";
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ ngu vkl :))";
                         }
                         else if (chonk == 1)
                         {
-                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thím ngu vđ @@";
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ ngu vđ @@";
+                        }
+                        else if (chonk == 2)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ chưa lấy dc kinh đâu :))";
+                        }
+                        else if (chonk == 3)
+                        {
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ yếu sl oy :))";
                         }
                         else
                         {
-                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Óc chó có thật :))";
+                            mesage.transform.GetChild(0).GetComponent<tk2dTextMesh>().text = "Thí chủ xin dừng bước";
                         }
                     }
                     else
